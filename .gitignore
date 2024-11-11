@@ -1,4 +1,8 @@
 env/
 .vscode/
 __pycache__
-
+.replit
+=1.0.0
+index.html
+wine.xlsx
+wine2.xlsx

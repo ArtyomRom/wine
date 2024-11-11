@@ -114,31 +114,28 @@
           </div>
         </div>
         <div class="row">
-        {% for category in categories %}
+        {% for category, characteristics_product in categories.items() %}
           <div class="row">
           <div class="col-12 section-title text-center mb-5">
             <h2 class="d-block">{{category}}</h2>
             <p>
             </p>
           </div>
-          {% for value in categories[category] %}
+          {% for product in characteristics_product %}
             <div class="col-lg-4 mb-5 col-md-6">
               <div class="wine_v_1 text-center pb-4 pt-5">
-                {% if value.Акция %}
-                <img src="images/{{value.Картинка}}" alt="Image" class="img-fluid">
-                <img src="assets/profitable.png" style="width:10rem;height: 10rem;position:absolute;right: -20px;top: -20px;">
-                {% else %}
-                <img src="images/{{value.Картинка}}" alt="Image" class="img-fluid">
+                {% if product.Акция %}
+                  <img src="assets/profitable.png" style="width:10rem;height: 10rem;position:absolute;right: -20px;top: -20px;">
                 {% endif %}
+                <img src="images/{{product.Картинка}}" alt="Image" class="img-fluid">
                 <div>
-                  <h3 class="heading mt-3 mb-3 text-dark">{{value.Название}}</h3>
+                  <h3 class="heading mt-3 mb-3 text-dark">{{product.Название}}</h3>
 
                   <p>
-                    {% if value.Сорт %}
-                    Сорт винограда - {{value.Сорт}}<br/>
+                    {% if product.Сорт %}
+                      Сорт винограда - {{product.Сорт}}<br/>
                     {% endif %}
-
-                    <span class="price">{{value.Цена}} р.</span>
+                    <span class="price">{{product.Цена}} р.</span>
                   </p>
                 </div>
               </div>
@@ -155,7 +152,7 @@
         <div class="row justify-content-center text-center align-items-center">
           <div class="col-md-8">
             <h2 style="font-size: 3rem;">проверено временем</h2>
-            <span class="sub-title" style="font-size: 2.5rem;">Уже {{data}} с вами</span>
+            <span class="sub-title" style="font-size: 2.5rem;">Уже {{age_company}} с вами</span>
           </div>
         </div>
       </div>
