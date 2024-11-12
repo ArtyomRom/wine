@@ -37,7 +37,7 @@
         ```
 
   - ***Склонируйте репозиторий***:
-  [link](https://github.com/ArtyomRom/Counting-clicks.git)
+  [link](https://github.com/ArtyomRom/wine.git)
 
   ## Запуск
 В рабочую директорию необхдимо поместить excel файл
