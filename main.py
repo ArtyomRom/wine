@@ -40,9 +40,9 @@ def main():
 
     for category in excel_wine:
         categories[category['Категория']].append(category)
-
+    year_of_creation = 1920
     rendered = template.render(categories=categories,
-                               age_company=generate_the_correct_word(datetime.now().year - 1920))
+                               age_company=generate_the_correct_word(datetime.now().year - year_of_creation))
 
     with open('index.html', 'w', encoding="utf8") as file:
         file.write(rendered)
